@@ -1,10 +1,40 @@
 @import "tailwindcss";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* 🔥 ADD THESE */
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --text-primary: #1f3a57;
+  --text-secondary: #6b7280;
+  --hover-bg: #f9fbff;
+  --tag-bg: #e6eef7;
+  --icon-bg: #eef3f8;
+  --accent: #2f5b8c;
 }
 
+[data-bs-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  /* 🔥 DARK MODE VALUES */
+  --card-bg: #111827;
+  --card-border: #2a2f3a;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --tag-bg: rgba(255, 255, 255, 0.08);
+  --icon-bg: rgba(255, 255, 255, 0.1);
+  --accent: #7cc4ff;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,4 +53,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
 }
