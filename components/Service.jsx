@@ -10,8 +10,9 @@ export default function Service() {
           <span>services </span>We offer
         </h2>
         <p>
-          We offer the best services around - from installations to repairs,
-          maintenance, and more!
+          We offer trusted property advisory, home loan assistance, investment
+          guidance, and verified real estate solutions tailored to support
+          smarter financial decisions.
         </p>
       </div>
 

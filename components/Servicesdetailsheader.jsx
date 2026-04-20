@@ -6,6 +6,10 @@ import { useState } from "react";
 export default function Servicesdetailsheader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header-section bg-color-3" data-bs-theme="light">
       <div className="header-bottom">
@@ -28,7 +32,6 @@ export default function Servicesdetailsheader() {
             </div>
 
             {/* MENU */}
-            {/* MENU */}
             <div className="menu-area">
               {/* desktop menu */}
               <ul className="menu menu--style1 d-none d-lg-flex">
@@ -36,14 +39,17 @@ export default function Servicesdetailsheader() {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
+                  <Link href="/about">About Us</Link>
+                </li>
+
+                <li>
                   <Link href="/services">Services</Link>
                 </li>
-                <li>
-                  <Link href="/about">About</Link>
-                </li>
+
                 <li>
                   <Link href="/blogs">Blogs</Link>
                 </li>
+
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
@@ -66,19 +72,33 @@ export default function Servicesdetailsheader() {
                   className="d-lg-none"
                 >
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/" onClick={closeMenu}>
+                      Home
+                    </Link>
                   </li>
+
                   <li>
-                    <Link href="/services">Services</Link>
+                    <Link href="/services" onClick={closeMenu}>
+                      Services
+                    </Link>
                   </li>
+
                   <li>
-                    <Link href="/about">About</Link>
+                    <Link href="/about" onClick={closeMenu}>
+                      About
+                    </Link>
                   </li>
+
                   <li>
-                    <Link href="/blogs">Blogs</Link>
+                    <Link href="/blogs" onClick={closeMenu}>
+                      Blogs
+                    </Link>
                   </li>
+
                   <li>
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/contact" onClick={closeMenu}>
+                      Contact Us
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -98,9 +118,7 @@ export default function Servicesdetailsheader() {
               {/* MOBILE HAMBURGER */}
               <div
                 className="header-bar d-lg-none home1"
-                onClick={() => {
-                  setMenuOpen(!menuOpen);
-                }}
+                onClick={() => setMenuOpen(!menuOpen)}
                 style={{ cursor: "pointer" }}
               >
                 <span></span>

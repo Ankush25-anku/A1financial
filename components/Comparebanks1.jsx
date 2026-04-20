@@ -261,8 +261,8 @@ export default function Comparebanks1() {
                 <li key={i}>✔ {f}</li>
               ))}
             </ul>
-
-            <button className="view-btn">View Details</button>
+{/* 
+            <button className="view-btn">View Details</button> */}
           </div>
         ))}
       </div>
