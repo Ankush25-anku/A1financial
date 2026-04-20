@@ -23,7 +23,7 @@ export default function About() {
                     <div className="floating-content__top-left">
                       <div className="floating-content__item">
                         <h3>
-                          <span>10</span> Years
+                          <span>3</span> Years
                         </h3>
                         <p>Financial Expertise</p>
                       </div>
@@ -33,7 +33,7 @@ export default function About() {
                     <div className="floating-content__bottom-right">
                       <div className="floating-content__item">
                         <h3>
-                          <span>25K+</span>
+                          <span>2K+</span>
                         </h3>
                         <p>Happy Clients Served</p>
                       </div>

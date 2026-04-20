@@ -120,8 +120,7 @@ export default function QuickComparison() {
           <tbody>
             {data.map((bank, i) => (
               <tr key={i}>
-                {/* BANK */}
-                <td className="bank-cell">
+                <td className="bank-cell" data-label="Bank">
                   <img src={bank.logo} alt="" />
                   <div>
                     <h4>{bank.name}</h4>
@@ -129,20 +128,21 @@ export default function QuickComparison() {
                   </div>
                 </td>
 
-                {/* RATE */}
-                <td>
+                <td data-label="Interest Rate">
                   <span className="rate-badge">{bank.rate}</span>
                 </td>
 
-                <td>{bank.loan}</td>
-                <td>{bank.ltv}</td>
-                <td>{bank.processing}</td>
+                <td data-label="Max Loan">{bank.loan}</td>
 
-                {/* RATING */}
-                <td>⭐ {bank.rating}</td>
+                <td data-label="Max LTV">{bank.ltv}</td>
 
-                {/* APPLY */}
-                <td className="apply-link">APPLY →</td>
+                <td data-label="Processing">{bank.processing}</td>
+
+                <td data-label="Rating">⭐ {bank.rating}</td>
+
+                <td className="apply-link" data-label="Action">
+                  APPLY →
+                </td>
               </tr>
             ))}
           </tbody>

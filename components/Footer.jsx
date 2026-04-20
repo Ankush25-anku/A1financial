@@ -4,18 +4,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer__wrapper">
-          {/* TOP */}
-          <div className="footer__top footer__top--style1">
-            <div className="row gy-5 gx-4">
-              {/* ABOUT */}
-              <div className="col-md-6">
-                <div className="footer__about">
-                  <Link href="/" className="footer__about-logo">
+    <footer class="footer ">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__top footer__top--style1">
+            <div class="row gy-5 gx-4">
+              <div class="col-md-6">
+                <div class="footer__about">
+                  <a href="index.html" class="footer__about-logo">
                     <img
-                      src="/assets/images/logo/logo14.png"
+                      src="/assets/images/logo/a1financial_tbg.png"
                       alt="A1 Financial"
                       style={{
                         height: "80px", // 🔥 increase more
@@ -24,172 +22,153 @@ export default function Footer() {
                         display: "block",
                       }}
                     />
-                  </Link>
+                  </a>
 
-                  <p className="footer__about-moto">
-                    Welcome to A1 Financial! We provide powerful trading
-                    solutions for crypto, forex, and stocks.
+                  <p class="footer__about-moto">
+                    A1 Financial Services provides trusted solutions in
+                    financial consulting, property advisory, loans, investment
+                    support, and strategic wealth planning. We help individuals
+                    and businesses make informed financial decisions with
+                    transparency, compliance, and long-term value.
                   </p>
+                </div>
+              </div>
 
-                  {/* APP BUTTONS */}
-                  <div className="footer__app">
-                    <div className="footer__app-item footer__app-item--apple">
-                      <div className="footer__app-inner">
-                        <div className="footer__app-thumb">
-                          <a
-                            href="https://www.apple.com/app-store/"
-                            target="_blank"
-                          >
-                            <img
-                              src="/assets/images/footer/apple.png"
-                              alt="apple"
-                            />
-                          </a>
-                        </div>
-                        <div className="footer__app-content">
-                          <span>Download on the</span>
-                          <p className="mb-0">App Store</p>
-                        </div>
-                      </div>
-                    </div>
+              <div class="col-md-2 col-sm-4 col-6">
+                <div class="footer__links">
+                  <div class="footer__links-tittle">
+                    <h6>Quick Links</h6>
+                  </div>
 
-                    <div className="footer__app-item footer__app-item--playstore">
-                      <div className="footer__app-inner">
-                        <div className="footer__app-thumb">
-                          <a
-                            href="https://play.google.com/store"
-                            target="_blank"
-                          >
-                            <img
-                              src="/assets/images/footer/play.png"
-                              alt="playstore"
-                            />
-                          </a>
-                        </div>
-                        <div className="footer__app-content">
-                          <span>GET IT ON</span>
-                          <p className="mb-0">Google Play</p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="footer__links-content">
+                    <ul class="footer__linklist">
+                      <li class="footer__linklist-item">
+                        <a href="#about">About Us</a>
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        <a href="#team">Teams</a>
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        <a href="#services">Services</a>
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        <a href="#features">Features</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              {/* QUICK LINKS */}
-              <div className="col-md-2 col-sm-4 col-6">
-                <div className="footer__links">
-                  <h6>Quick links</h6>
-                  <ul className="footer__linklist">
-                    <li>
-                      <Link href="/#about">About Us</Link>
-                    </li>
-                    <li>
-                      <Link href="/#team">Teams</Link>
-                    </li>
-                    <li>
-                      <Link href="/#services">Services</Link>
-                    </li>
-                    <li>
-                      <Link href="/#features">Features</Link>
-                    </li>
-                  </ul>
+              <div class="col-md-2 col-sm-4 col-6">
+                <div class="footer__links">
+                  <div class="footer__links-tittle">
+                    <h6>Office Address</h6>
+                  </div>
+
+                  <div class="footer__links-content">
+                    <ul class="footer__linklist">
+                      <li class="footer__linklist-item">
+                        <a
+                          href="https://www.google.com/maps/dir/13.0135909,77.7616675/Share+Space+-+Coworking+Space+-+Whitefield/"
+                          target="_blank"
+                        >
+                          88, Borewell Rd
+                        </a>
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        Palm Meadows, Dodsworth Layout
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        Whitefield, Bengaluru 560066
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
-              {/* SUPPORT */}
-              <div className="col-md-2 col-sm-4 col-6">
-                <div className="footer__links">
-                  <h6>Support</h6>
-                  <ul className="footer__linklist">
-                    <li>
-                      <Link href="#">Terms & Conditions</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Privacy Policy</Link>
-                    </li>
-                    <li>
-                      <Link href="/faq">FAQs</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Support Center</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <div class="col-md-2 col-sm-4">
+                <div class="footer__links">
+                  <div class="footer__links-tittle">
+                    <h6>Registration</h6>
+                  </div>
 
-              {/* COMPANY */}
-              <div className="col-md-2 col-sm-4">
-                <div className="footer__links">
-                  <h6>Company</h6>
-                  <ul className="footer__linklist">
-                    <li>
-                      <Link href="#">Careers</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Updates</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jobs</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Announcements</Link>
-                    </li>
-                  </ul>
+                  <div class="footer__links-content">
+                    <ul class="footer__linklist">
+                      <li class="footer__linklist-item">GSTIN:</li>
+
+                      <li class="footer__linklist-item">29ACLFA0142L1ZB</li>
+
+                      <li class="footer__linklist-item">
+                        <a href="tel:+919187116639">+91 9187116639</a>
+                      </li>
+
+                      <li class="footer__linklist-item">
+                        <a href="mailto:services@A1financialservice.com">
+                          services@A1financialservice.com
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* BOTTOM */}
-          <div className="footer__bottom">
-            <div className="footer__end">
-              <div className="footer__end-copyright">
-                <p className="mb-0">
-                  © {new Date().getFullYear()} All Rights Reserved By A1
-                  Financial
-                </p>
+          <div class="footer__bottom">
+            <div class="footer__end">
+              <div class="footer__end-copyright">
+                <p class="mb-0">© 2026 All Rights Reserved By A1 Financial</p>
               </div>
 
-              {/* SOCIAL */}
-              <ul className="social">
-                <li>
-                  <a className="social__link social__link--style22">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="social__link social__link--style22">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="social__link social__link--style22">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="social__link social__link--style22">
-                    <i className="fab fa-youtube"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="social__link social__link--style22">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link social__link--style22">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a href="#" class="social__link social__link--style22">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a href="#" class="social__link social__link--style22">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a href="#" class="social__link social__link--style22">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a href="#" class="social__link social__link--style22">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* SHAPES */}
-      <div className="footer__shape">
-        <span className="footer__shape-item footer__shape-item--1">
-          <img src="/assets/images/footer/1.png" alt="shape" />
+      <div class="footer__shape">
+        <span class="footer__shape-item footer__shape-item--1">
+          <img src="assets/images/footer/1.png" alt="shape icon" />
         </span>
-        <span className="footer__shape-item footer__shape-item--2">
+
+        <span class="footer__shape-item footer__shape-item--2">
           <span></span>
         </span>
       </div>

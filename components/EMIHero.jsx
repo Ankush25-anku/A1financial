@@ -16,17 +16,15 @@ export default function EMIHero({ activeTab, onTabChange }) {
         </button>
 
         <button
-          type="button"
-          className={`emi-tab ${activeTab === "emi" ? "active" : ""}`}
-          onClick={() => onTabChange("emi")}
+          className={`emi-tab ${activeTab === "budget" ? "active" : ""}`}
+          onClick={() => onTabChange("budget")}
         >
           🏠 Property Budget
         </button>
 
         <button
-          type="button"
-          className={`emi-tab ${activeTab === "emi" ? "active" : ""}`}
-          onClick={() => onTabChange("emi")}
+          className={`emi-tab ${activeTab === "prepayment" ? "active" : ""}`}
+          onClick={() => onTabChange("prepayment")}
         >
           ⚡ Prepayment Planner
         </button>

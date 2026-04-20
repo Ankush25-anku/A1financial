@@ -1,6 +1,9 @@
 "use client";
+import { useState } from "react";
 
 export default function Comparebanks1() {
+  const [activeFilter, setActiveFilter] = useState("ALL");
+
   const banks = [
     {
       name: "State bank of india",
@@ -160,23 +163,44 @@ export default function Comparebanks1() {
       ],
     },
   ];
+
+  const filteredBanks =
+    activeFilter === "ALL"
+      ? banks
+      : banks.filter((bank) => bank.sector === activeFilter);
   return (
     <section className="compare-section">
       {/* FILTER TABS */}
       <div className="compare-tabs">
-        <button className="active">
+        <button
+          className={activeFilter === "ALL" ? "active" : ""}
+          onClick={() => setActiveFilter("ALL")}
+        >
           All Banks <span>9</span>
         </button>
-        <button>
+
+        <button
+          className={activeFilter === "PUBLIC SECTOR" ? "active" : ""}
+          onClick={() => setActiveFilter("PUBLIC SECTOR")}
+        >
           Public Sector <span>4</span>
         </button>
-        <button>
+
+        <button
+          className={activeFilter === "PRIVATE SECTOR" ? "active" : ""}
+          onClick={() => setActiveFilter("PRIVATE SECTOR")}
+        >
           Private Sector <span>3</span>
         </button>
-        <button>
+
+        <button
+          className={activeFilter === "NBFC" ? "active" : ""}
+          onClick={() => setActiveFilter("NBFC")}
+        >
           NBFC <span>2</span>
         </button>
-        <p>Showing 9 banks</p>
+
+        <p>Showing {filteredBanks.length} banks</p>
       </div>
 
       {/* HEADING */}
@@ -187,7 +211,7 @@ export default function Comparebanks1() {
 
       {/* CARDS */}
       <div className="compare-grid">
-        {banks.map((bank, i) => (
+        {filteredBanks.map((bank, i) => (
           <div className="bank-card" key={i}>
             {/* TOP */}
             <div className="card-top">

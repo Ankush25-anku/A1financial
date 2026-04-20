@@ -30,8 +30,6 @@ export default function Header() {
                 {/* DEMOS */}
                 <li className="megamenu">
                   <a href="">Home</a>
-
-                  
                 </li>
 
                 {/* SERVICES */}
@@ -94,7 +92,7 @@ export default function Header() {
               <div className="menu-area">
                 <div className="header-btn">
                   <Link
-                    href="/signup"
+                    href="/contact"
                     className="trk-btn trk-btn--border trk-btn--primary"
                   >
                     Join Now

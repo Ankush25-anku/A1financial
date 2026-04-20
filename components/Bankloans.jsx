@@ -55,17 +55,17 @@ export default function Bankloans() {
           <ul>
             {/* OTHER BANKS */}
             <li>
-              <img src="/banks/icici.png" />
+              <img src="/banks/icici.png" alt="ICICI Bank" />
               <span>ICICI Bank</span>
             </li>
 
             <li>
-              <img src="/banks/hdfc.png" />
+              <img src="/banks/hdfc.png" alt="HDFC Bank" />
               <span>HDFC Bank</span>
             </li>
 
             <li>
-              <img src="/banks/axis.png" />
+              <img src="/banks/axis.png" alt="Axis Bank" />
               <span>Axis Bank</span>
             </li>
           </ul>
@@ -77,12 +77,12 @@ export default function Bankloans() {
           <ul>
             {/* NBFC */}
             <li>
-              <img src="/banks/tata.png" />
+              <img src="/banks/tata.png" alt="Tata Capital" />
               <span>Tata Capital</span>
             </li>
 
             <li>
-              <img src="/banks/bajaj.png" />
+              <img src="/banks/bajaj.png" alt="Bajaj Finserv" />
               <span>Bajaj Finserv</span>
             </li>
           </ul>
@@ -105,7 +105,9 @@ export default function Bankloans() {
             Get personalized assistance in securing best home loan deals from
             top banks.
           </p>
-          <button>Apply Now</button>
+          <Link href="/contact">
+            <button>Apply Now</button>
+          </Link>
         </div>
       </div>
     </section>

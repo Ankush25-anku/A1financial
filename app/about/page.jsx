@@ -1,5 +1,5 @@
 import React from "react";
-import Servicesheader from "../../components/Servicesheader";
+
 import AboutHeader from "../../components/AboutHeader";
 import StorySection from "../../components/StorySection";
 import About from "../../components/About";
@@ -9,7 +9,7 @@ import CTASection from "../../components/CTASection";
 const page = () => {
   return (
     <div>
-      <Servicesheader />
+  
       <AboutHeader />
       <StorySection />
       <About />

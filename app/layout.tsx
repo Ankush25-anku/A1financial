@@ -3,13 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Preloader from "@/components/Preloader";
-
 import Servicesdetailsheader from "@/components/Servicesdetailsheader";
 import ThemeToggle from "@/components/ThemeToggle";
-import AOSInit from "@/components/AOSInit"; // ✅ NEW
-import Footer from "@/components/Footer";
+import AOSInit from "@/components/AOSInit";
 import Script from "next/script";
-
+import Footer from "@/components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,9 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "A1 Financial | Crypto, Forex, Stocks & Trading Services",
+  title:
+    "A1 Financial Services | Property Advisory, Home Loans & Investment Solutions",
   description:
-    "A1 Financial - Professional platform for crypto, forex, stocks & trading business.",
+    "A1 Financial Services offers trusted property advisory, home loan assistance, real estate investment guidance, and strategic financial solutions for individuals and businesses.",
 };
 
 export default function RootLayout({
@@ -38,10 +37,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
-        {/* ✅ Favicon */}
-        <link rel="icon" href="/assets/images/favicon.png" />
-
-        {/* ✅ CSS FILES */}
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/aos.css" />
         <link rel="stylesheet" href="/assets/css/all.min.css" />
@@ -50,45 +45,62 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-screen">
-        {/* ✅ Preloader */}
+
         <Preloader />
 
-        {/* ✅ Theme Toggle */}
         <ThemeToggle />
-           <Servicesdetailsheader />
-        {/* ✅ Header */}
-      
 
-        {/* ✅ AOS INIT (CLIENT SIDE ONLY) */}
+        <Servicesdetailsheader />
+
         <AOSInit />
 
-        {/* ✅ Page Content */}
-        {children}
-<Footer />
-        {/* ================= SCRIPTS ================= */}
+        {/* moved INSIDE body (important fix) */}
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+          aria-label="Chat on WhatsApp"
+        >
+          <img
+            src="/assets/images/whatsapp.png"
+            alt="WhatsApp"
+          />
+        </a>
 
-        {/* Bootstrap */}
+        {children}
+      <Footer />
+
         <Script
           src="/assets/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
         />
 
-        {/* Icons */}
-        <Script src="/assets/js/all.min.js" strategy="afterInteractive" />
+        <Script
+          src="/assets/js/all.min.js"
+          strategy="afterInteractive"
+        />
 
-        {/* Swiper */}
         <Script
           src="/assets/js/swiper-bundle.min.js"
           strategy="afterInteractive"
         />
 
-        {/* Other Scripts */}
-        <Script src="/assets/js/fslightbox.js" strategy="afterInteractive" />
+        <Script
+          src="/assets/js/fslightbox.js"
+          strategy="afterInteractive"
+        />
+
         <Script
           src="/assets/js/purecounter_vanilla.js"
           strategy="afterInteractive"
         />
-        <Script src="/assets/js/custom.js" strategy="afterInteractive" />
+
+        <Script
+          src="/assets/js/custom.js"
+          strategy="afterInteractive"
+        />
+
       </body>
     </html>
   );

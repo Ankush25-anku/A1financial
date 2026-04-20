@@ -5,8 +5,9 @@ import { useState } from "react";
 
 export default function Servicesdetailsheader() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="header-section bg-color-3">
+    <header className="header-section bg-color-3" data-bs-theme="light">
       <div className="header-bottom">
         <div className="container">
           <div className="header-wrapper">
@@ -14,10 +15,10 @@ export default function Servicesdetailsheader() {
             <div className="logo">
               <Link href="/">
                 <img
-                  src="/assets/images/logo/logo14.png"
+                  src="/assets/images/logo/a1financial_tbg.png"
                   alt="A1 Financial"
                   style={{
-                    height: "80px", // 🔥 increase more
+                    height: "80px",
                     width: "auto",
                     objectFit: "contain",
                     display: "block",
@@ -27,106 +28,84 @@ export default function Servicesdetailsheader() {
             </div>
 
             {/* MENU */}
-            <div
-              className={`menu-area ${menuOpen ? "mobile-menu-active" : ""}`}
-            >
-              <ul className="menu menu--style1">
-                {/* DEMOS MEGA MENU */}
-                <li className="megamenu">
-                  <a href="/">Home</a>
-                </li>
-
-                {/* SERVICES */}
+            {/* MENU */}
+            <div className="menu-area">
+              {/* desktop menu */}
+              <ul className="menu menu--style1 d-none d-lg-flex">
                 <li>
-                  <a href="#">Services</a>
-                  <ul className="submenu">
-                    <li>
-                      <Link href="/services">Services</Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">Services Details</Link>
-                    </li>
-                  </ul>
+                  <Link href="/">Home</Link>
                 </li>
-
-                {/* ABOUT */}
                 <li>
-                  <a href="#">About</a>
-                  <ul className="submenu">
-                    <li>
-                      <Link href="/about">About Us</Link>
-                    </li>
-                    <li>
-                      <Link href="/price">Price</Link>
-                    </li>
-                    <li>
-                      <Link href="/team">Team</Link>
-                    </li>
-                    <li>
-                      <Link href="/team-2">Team 2</Link>
-                    </li>
-                    <li>
-                      <Link href="/team-details">Team Details</Link>
-                    </li>
-                  </ul>
+                  <Link href="/services">Services</Link>
                 </li>
-
-                {/* PAGES */}
                 <li>
-                  <a href="#">Pages</a>
-                  <ul className="submenu">
-                    <li>
-                      <Link href="/blogs">Blogs</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-sidebar">Blog Sidebar</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-details">Blog Details</Link>
-                    </li>
-                    <li>
-                      <Link href="/signup">Sign Up</Link>
-                    </li>
-                    <li>
-                      <Link href="/signin">Sign In</Link>
-                    </li>
-                    <li>
-                      <Link href="/forgot-pass">Reset Password</Link>
-                    </li>
-                    <li>
-                      <Link href="/404">404 Error</Link>
-                    </li>
-                  </ul>
+                  <Link href="/about">About</Link>
                 </li>
-
-                {/* CONTACT */}
+                <li>
+                  <Link href="/blogs">Blogs</Link>
+                </li>
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
               </ul>
+
+              {/* mobile menu */}
+              {menuOpen && (
+                <ul
+                  style={{
+                    position: "fixed",
+                    top: "80px",
+                    left: "0",
+                    right: "0",
+                    background: "#fff",
+                    zIndex: "999999",
+                    padding: "25px",
+                    listStyle: "none",
+                    boxShadow: "0 10px 30px rgba(0,0,0,.08)",
+                  }}
+                  className="d-lg-none"
+                >
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/services">Services</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link href="/blogs">Blogs</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">Contact Us</Link>
+                  </li>
+                </ul>
+              )}
             </div>
 
             {/* HEADER ACTION */}
             <div className="header-action">
-              <div className="menu-area">
-                <div className="header-btn">
-                  <Link
-                    href="/signup"
-                    className="trk-btn trk-btn--border trk-btn--primary"
-                  >
-                    <span>Join Now</span>
-                  </Link>
-                </div>
-
-                {/* MOBILE MENU ICON */}
-                <div
-                  className="header-bar d-lg-none home1"
-                  onClick={() => setMenuOpen(!menuOpen)}
+              <div className="header-btn d-none d-lg-block">
+                <Link
+                  href="/contact"
+                  className="trk-btn trk-btn--border trk-btn--primary"
                 >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+                  <span>Join Now</span>
+                </Link>
+              </div>
+
+              {/* MOBILE HAMBURGER */}
+              <div
+                className="header-bar d-lg-none home1"
+                onClick={() => {
+                  setMenuOpen(!menuOpen);
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
           </div>

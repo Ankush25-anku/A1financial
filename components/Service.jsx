@@ -3,67 +3,146 @@
 import Link from "next/link";
 
 export default function Service() {
-  const features = [
-    {
-      icon: "⚡",
-      title: "Fast Processing",
-      desc: "Get approval in 48 hours",
-    },
-    {
-      icon: "💰",
-      title: "Best Rates",
-      desc: "Competitive interest rates",
-    },
-    {
-      icon: "👨‍💼",
-      title: "Expert Guidance",
-      desc: "Dedicated loan advisors",
-    },
-    {
-      icon: "📄",
-      title: "Easy Documentation",
-      desc: "Minimal paperwork required",
-    },
-  ];
-
   return (
-    <section id="services" className="service padding-top padding-bottom">
-      {/* HEADER */}
-      <div className="section-header section-header--max50 text-center">
+    <section className="service padding-top padding-bottom">
+      <div className="section-header section-header--max50">
         <h2 className="mb-10 mt-minus-5">
-          <span>Loan </span>Services
+          <span>services </span>We offer
         </h2>
-
         <p>
-          Explore flexible loan options with competitive interest rates and
-          quick approvals.
+          We offer the best services around - from installations to repairs,
+          maintenance, and more!
         </p>
+      </div>
+
+      <div className="button-wrapper text-center mb-5">
+        <Link href="/emicalculator">
+          <button className="emi-btn">Calculate EMI</button>
+        </Link>
+
+        <Link href="/comparebanks">
+          <button className="offer-btn">View Bank Offers</button>
+        </Link>
       </div>
 
       <div className="container">
         <div className="service__wrapper">
-          {/* BUTTONS */}
-          <div className="text-center mt-5 button-wrapper">
-            <Link href="/emicalculator">
-              <button className="emi-btn">Calculate EMI</button>
-            </Link>
-
-            <button className="offer-btn">View Bank Offers</button>
-          </div>
-
-          {/* FEATURES */}
-          <div className="row mt-5 text-center feature-row">
-            {features.map((item, index) => (
-              <div key={index} className="col-6 col-md-3">
-                <div className="feature-box">
-                  <div className="feature-icon">{item.icon}</div>
-
-                  <h6>{item.title}</h6>
-
-                  <p>{item.desc}</p>
+          <div className="row g-4 align-items-center">
+            <div className="col-sm-6 col-md-6 col-lg-4">
+              <div
+                className="service__item service__item--style1"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
+                <div className="service__item-inner text-center">
+                  <div className="service__item-thumb mb-30">
+                    <img
+                      className="dark"
+                      src="/assets/images/service/1.png"
+                      alt="service-icon"
+                    />
+                  </div>
+                  <div className="service__item-content">
+                    <h5>
+                      <a className="stretched-link" href="service-details.html">
+                        Fast Processing
+                      </a>
+                    </h5>
+                    <p className="mb-0">
+                      Get quick approvals and streamlined processing for faster
+                      loan disbursement.
+                    </p>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="col-sm-6 col-lg-4">
+              <div
+                className="service__item service__item--style1"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div className="service__item-inner text-center">
+                  <div className="service__item-thumb mb-30">
+                    <img
+                      className="dark"
+                      src="/assets/images/service/2.png"
+                      alt="service-icon"
+                    />
+                  </div>
+                  <div className="service__item-content">
+                    <h5>
+                      <a className="stretched-link" href="service-details.html">
+                        Best Rates
+                      </a>
+                    </h5>
+                    <p className="mb-0">
+                      Enjoy competitive interest rates tailored to your
+                      financial needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 col-lg-4">
+              <div
+                className="service__item service__item--style1"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                <div className="service__item-inner text-center">
+                  <div className="service__item-thumb mb-30">
+                    <img
+                      className="dark"
+                      src="/assets/images/service/3.png"
+                      alt="service-icon"
+                    />
+                  </div>
+                  <div className="service__item-content">
+                    <h5>
+                      <a className="stretched-link" href="service-details.html">
+                        Expert Guidance
+                      </a>
+                    </h5>
+                    <p className="mb-0">
+                      Receive professional support to choose the right financial
+                      solution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 col-lg-4">
+              <div
+                className="service__item service__item--style1"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
+                <div className="service__item-inner text-center">
+                  <div className="service__item-thumb mb-30">
+                    <img
+                      className="dark"
+                      src="/assets/images/service/4.png"
+                      alt="service-icon"
+                    />
+                  </div>
+                  <div className="service__item-content">
+                    <h5>
+                      <a className="stretched-link" href="service-details.html">
+                        Easy Documentation
+                      </a>
+                    </h5>
+                    <p className="mb-0">
+                      Minimal paperwork and hassle-free documentation for a
+                      smooth experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

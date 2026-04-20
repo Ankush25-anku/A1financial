@@ -7,7 +7,7 @@ export default function Preloader() {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => setLoading(false), 500); // smooth delay
+      setTimeout(() => setLoading(false), 500);
     };
 
     if (document.readyState === "complete") {
@@ -23,7 +23,15 @@ export default function Preloader() {
 
   return (
     <div className="preloader">
-      <img src="/assets/images/logo/preloader.png" alt="preloader icon" />
+      <img
+        src="/assets/images/logo/logo15.png"
+        alt="A1 Financial"
+        style={{
+          width: "180px",
+          height: "auto",
+          objectFit: "contain",
+        }}
+      />
     </div>
   );
 }

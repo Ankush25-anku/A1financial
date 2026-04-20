@@ -49,16 +49,22 @@ export default function ContactSection() {
                 </div>
 
                 {/* CONTACT DETAILS */}
+                {/* CONTACT DETAILS */}
                 <div className="contact__details">
                   {/* PHONE */}
                   <div className="contact__item">
                     <div className="contact__item-inner">
                       <div className="contact__item-thumb">
-                        <img src="/assets/images/contact/1.png" alt="" />
+                        <i className="fas fa-phone-alt fs-2"></i>
                       </div>
+
                       <div className="contact__item-content">
-                        <p>0917749254</p>
-                        <p>0983888611</p>
+                        <p>
+                          <a href="tel:+919187116639">+91 9187116639</a>
+                        </p>
+                        <p>
+                          <a href="tel:+918951916579">+91 8951916579</a>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -67,11 +73,15 @@ export default function ContactSection() {
                   <div className="contact__item">
                     <div className="contact__item-inner">
                       <div className="contact__item-thumb">
-                        <img src="/assets/images/contact/2.png" alt="" />
+                        <i className="fas fa-envelope fs-2"></i>
                       </div>
+
                       <div className="contact__item-content">
-                        <p>bitrader@gmail.com</p>
-                        <p>hello@gmail.com</p>
+                        <p>
+                          <a href="mailto:services@A1financialservice.com">
+                            services@A1financialservice.com
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -80,11 +90,50 @@ export default function ContactSection() {
                   <div className="contact__item">
                     <div className="contact__item-inner">
                       <div className="contact__item-thumb">
-                        <img src="/assets/images/contact/3.png" alt="" />
+                        <i className="fas fa-map-marker-alt fs-2"></i>
                       </div>
+
                       <div className="contact__item-content">
-                        <p>88 Sheridan Street</p>
-                        <p>534 Victoria Trail</p>
+                        <p>
+                          <a
+                            href="https://www.google.com/maps/dir/13.0135909,77.7616675/Share+Space+-+Coworking+Space+in+Whitefield,+88,+Borewell+Rd,+Palm+Meadows,+Dodsworth+Layout,+Whitefield,+Bengaluru,+Karnataka+560066/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            88, Borewell Rd, Palm Meadows,
+                          </a>
+                        </p>
+
+                        <p>
+                          <a
+                            href="https://www.google.com/maps/dir/13.0135909,77.7616675/Share+Space+-+Coworking+Space+in+Whitefield,+88,+Borewell+Rd,+Palm+Meadows,+Dodsworth+Layout,+Whitefield,+Bengaluru,+Karnataka+560066/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Dodsworth Layout, Whitefield, Bengaluru 560066
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* WHATSAPP */}
+                  <div className="contact__item">
+                    <div className="contact__item-inner">
+                      <div className="contact__item-thumb">
+                        <i className="fab fa-whatsapp fs-2"></i>
+                      </div>
+
+                      <div className="contact__item-content">
+                        <p>
+                          <a
+                            href="https://wa.me/919187116639"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Chat with us on WhatsApp
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -25,19 +25,19 @@ export default function Feature() {
       title: "Home Loan",
       image: "/assets/images/service/1.png",
       icon: "/assets/images/feature/5.png",
-      amount: "7.10%",
+      amount: "8%",
     },
     {
       title: "Loan Against Property",
       image: "/assets/images/service/2.png",
       icon: "/assets/images/feature/6.png",
-      amount: "8.5%",
+      amount: "9%",
     },
     {
       title: "Construction Loan",
       image: "/assets/images/service/3.png",
       icon: "/assets/images/feature/7.png",
-      amount: "7.10%",
+      amount: "10%",
     },
   ];
   return (
@@ -196,7 +196,7 @@ export default function Feature() {
                               >
                                 10M
                               </span>
-                              M
+                              
                             </h3>
                             <p className="ms-3 style2">Available for loan</p>
                           </div>
@@ -245,7 +245,8 @@ export default function Feature() {
                               >
                                 10M
                               </span>
-                              M
+                              
+
                             </h3>
                             <p className="ms-3 style2">Rate of Interest</p>
                           </div>
@@ -294,7 +295,8 @@ export default function Feature() {
                               >
                                 10M
                               </span>
-                              M
+                              
+
                             </h3>
                             <p className="ms-3 style2">Available for loan</p>
                           </div>

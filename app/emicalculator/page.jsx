@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Servicesdetailsheader from "../../components/Servicesdetailsheader";
+
 import EMIHero from "../../components/EMIHero";
 import EMIContent from "../../components/EMIContent";
 
@@ -10,7 +10,7 @@ const Page = () => {
 
   return (
     <div>
-      <Servicesdetailsheader />
+  
 
       {/* PASS BOTH props */}
       <EMIHero activeTab={activeTab} onTabChange={setActiveTab} />

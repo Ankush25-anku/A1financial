@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,29 +12,58 @@ export default function Blog() {
     {
       title: "Real Estate Market Outlook: 2026 Analysis",
       category: "Market Trends",
-      img: "/assets/images/blog/1.png",
+      img: "/assets/images/blog/author/11.jpeg",
       author: "A1 Financial Team",
       date: "10/02/2026",
-      authorImg: "/assets/images/blog/author/1.png",
-      desc: "Explore the latest real estate market trends, pricing insights, and future growth opportunities for smart investors.",
+      authorImg: "/assets/images/blog/author/11.jpeg",
+      desc: "Explore the latest real estate trends, pricing insights, and future investment opportunities across India.",
     },
     {
       title: "First-Time Home Buyer’s Complete Checklist",
       category: "Home Buying Guide",
-      img: "/assets/images/blog/2.png",
+      img: "/assets/images/blog/author/12.png",
       author: "A1 Financial Team",
       date: "18/01/2026",
-      authorImg: "/assets/images/blog/author/2.png",
-      desc: "Everything you need to know before buying your first property — from budgeting to legal checks and loan approval.",
+      authorImg: "/assets/images/blog/author/12.png",
+      desc: "From budgeting to loan approval, discover everything you need before purchasing your first home.",
     },
     {
-      title: "Top 10 Areas to Invest in Bangalore for 2026",
+      title: "Top Investment Areas in Bangalore for 2026",
       category: "Investment Tips",
-      img: "/assets/images/blog/3.png",
+      img: "/assets/images/blog/author/13.png",
       author: "A1 Financial Team",
       date: "05/01/2026",
-      authorImg: "/assets/images/blog/author/3.png",
-      desc: "Discover high-growth locations in Bangalore with strong ROI potential for real estate investment.",
+      authorImg: "/assets/images/blog/author/13.png",
+      desc: "Find high-growth locations in Bangalore offering strong ROI potential for smart property investors.",
+    },
+
+    /* duplicate for smooth autoplay */
+    {
+      title: "Real Estate Market Outlook: 2026 Analysis",
+      category: "Market Trends",
+      img: "/assets/images/blog/author/16.png",
+      author: "A1 Financial Team",
+      date: "10/02/2026",
+      authorImg: "/assets/images/blog/author/16.png",
+      desc: "Explore the latest real estate trends, pricing insights, and future investment opportunities across India.",
+    },
+    {
+      title: "First-Time Home Buyer’s Complete Checklist",
+      category: "Home Buying Guide",
+      img: "/assets/images/blog/author/14.png",
+      author: "A1 Financial Team",
+      date: "18/01/2026",
+      authorImg: "/assets/images/blog/author/14.png",
+      desc: "From budgeting to loan approval, discover everything you need before purchasing your first home.",
+    },
+    {
+      title: "Top Investment Areas in Bangalore for 2026",
+      category: "Investment Tips",
+      img: "/assets/images/blog/author/15.png",
+      author: "A1 Financial Team",
+      date: "05/01/2026",
+      authorImg: "/assets/images/blog/author/15.png",
+      desc: "Find high-growth locations in Bangalore offering strong ROI potential for smart property investors.",
     },
   ];
 
@@ -45,20 +74,21 @@ export default function Blog() {
         <div className="section-header d-md-flex align-items-center justify-content-between">
           <div className="section-header__content">
             <h2 className="mb-10">
-              <span>Latest</span> Articles
+              <span>Insights</span> for Home Buyers & Investors
             </h2>
+
             <p className="mb-0">
-              Get expert insights on real estate, home loans, and smart
-              investment strategies.
+              Stay updated with real estate trends, home loan tips, and smart
+              investment strategies from A1 Financial.
             </p>
           </div>
 
-          {/* NAV */}
           <div className="section-header__action">
             <div className="swiper-nav swiper-nav--style1">
               <button className="swiper-nav__btn blog__slider-prev">
                 <i className="fa-solid fa-angle-left"></i>
               </button>
+
               <button className="swiper-nav__btn blog__slider-next active">
                 <i className="fa-solid fa-angle-right"></i>
               </button>
@@ -67,19 +97,22 @@ export default function Blog() {
         </div>
 
         {/* SLIDER */}
-        <div
-          className="blog__wrapper"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <div className="blog__wrapper">
           <Swiper
-            modules={[Navigation]}
-            loop={true}
+            modules={[Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={3}
+            loop={true}
+            speed={1200}
+            loopAdditionalSlides={6}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
             navigation={{
-              nextEl: ".blog__slider-next",
               prevEl: ".blog__slider-prev",
+              nextEl: ".blog__slider-next",
             }}
             breakpoints={{
               0: { slidesPerView: 1 },
@@ -89,11 +122,16 @@ export default function Blog() {
           >
             {blogs.map((blog, index) => (
               <SwiperSlide key={index}>
-                <div className="blog__item blog__item--style2">
+                <div
+                  className="blog__item blog__item--style2"
+                  style={{
+                    pointerEvents: "none",
+                  }}
+                >
                   <div className="blog__item-inner">
                     {/* IMAGE */}
                     <div className="blog__thumb">
-                      <img src={blog.img} alt="blog" />
+                      <img src={blog.img} alt={blog.title} />
                     </div>
 
                     {/* CONTENT */}
@@ -105,7 +143,15 @@ export default function Blog() {
                       </div>
 
                       <h5>
-                        <Link href="/blog-details">{blog.title}</Link>
+                        <span
+                          style={{
+                            cursor: "default",
+                            pointerEvents: "none",
+                            textDecoration: "none",
+                          }}
+                        >
+                          {blog.title}
+                        </span>
                       </h5>
 
                       <p className="mb-15">{blog.desc}</p>
@@ -113,8 +159,9 @@ export default function Blog() {
                       {/* AUTHOR */}
                       <div className="blog__writer">
                         <div className="blog__writer-thumb">
-                          <img src={blog.authorImg} alt="author" />
+                          <img src={blog.authorImg} alt={blog.author} />
                         </div>
+
                         <div className="blog__writer-designation">
                           <h6 className="mb-0">{blog.author}</h6>
                           <span>{blog.date}</span>
@@ -129,14 +176,20 @@ export default function Blog() {
         </div>
 
         {/* BUTTON */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Link
             href="/blogs"
             className="trk-btn trk-btn--border trk-btn--primary mt-15"
           >
-            View more
+            View More
           </Link>
-        </div>
+        </div> */}
+      </div>
+
+      <div className="blog__shape">
+        <span className="blog__shape-item blog__shape-item--1">
+          <span></span>
+        </span>
       </div>
     </section>
   );

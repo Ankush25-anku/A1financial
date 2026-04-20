@@ -1,6 +1,6 @@
 import React from "react";
 import CompareBanks from "../../components/CompareBanks";
-import Servicesdetailsheader from "../../components/Servicesdetailsheader";
+
 import Comparebanks1 from "../../components/Comparebanks1";
 import QuickComparison from "../../components/QuickComparison";
 import WhyApply from "../../components/WhyApply";
@@ -10,7 +10,6 @@ import CTASection1 from "../../components/CTASection1";
 const page = () => {
   return (
     <div>
-      <Servicesdetailsheader />
       <CompareBanks />
       <Comparebanks1 />
       <QuickComparison />
