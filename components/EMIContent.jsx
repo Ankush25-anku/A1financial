@@ -38,7 +38,8 @@ export default function EMIContent({ activeTab }) {
                 <>
                   <h5>Loan Details</h5>
 
-                  <label>Loan Amount ₹ {loan.toLocaleString()}</label>
+                  <label>Loan Amount ₹ {loan.toLocaleString("en-IN")}</label>
+
                   <input
                     type="range"
                     min="500000"
@@ -49,6 +50,7 @@ export default function EMIContent({ activeTab }) {
                   />
 
                   <label>Interest Rate {rate}%</label>
+
                   <input
                     type="range"
                     min="5"
@@ -59,6 +61,7 @@ export default function EMIContent({ activeTab }) {
                   />
 
                   <label>Tenure {years} Years</label>
+
                   <input
                     type="range"
                     min="1"
@@ -73,7 +76,9 @@ export default function EMIContent({ activeTab }) {
                 <>
                   <h5>Income Details</h5>
 
-                  <label>Monthly Salary ₹ {salary.toLocaleString()}</label>
+                  <label>
+                    Monthly Salary ₹ {salary.toLocaleString("en-IN")}
+                  </label>
 
                   <input
                     type="range"
@@ -84,7 +89,9 @@ export default function EMIContent({ activeTab }) {
                     onChange={(e) => setSalary(Number(e.target.value))}
                   />
 
-                  <label>Existing EMI ₹ {existingEmi.toLocaleString()}</label>
+                  <label>
+                    Existing EMI ₹ {existingEmi.toLocaleString("en-IN")}
+                  </label>
 
                   <input
                     type="range"
@@ -102,7 +109,7 @@ export default function EMIContent({ activeTab }) {
                   <h5>Prepayment Strategy</h5>
 
                   <label>
-                    Extra Monthly Payment ₹ {extraPay.toLocaleString()}
+                    Extra Monthly Payment ₹ {extraPay.toLocaleString("en-IN")}
                   </label>
 
                   <input
@@ -123,15 +130,15 @@ export default function EMIContent({ activeTab }) {
               <h6>RESULT</h6>
 
               {activeTab === "emi" && (
-                <h2>₹{Math.round(emi).toLocaleString()}</h2>
+                <h2>₹{Math.round(emi).toLocaleString("en-IN")}</h2>
               )}
 
               {activeTab === "budget" && (
-                <h2>₹{Math.round(budget).toLocaleString()}</h2>
+                <h2>₹{Math.round(budget).toLocaleString("en-IN")}</h2>
               )}
 
               {activeTab === "prepayment" && (
-                <h2>₹{Math.round(saveAmount).toLocaleString()}</h2>
+                <h2>₹{Math.round(saveAmount).toLocaleString("en-IN")}</h2>
               )}
 
               <p>Updates dynamically based on inputs</p>

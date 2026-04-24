@@ -12,7 +12,7 @@ export default function StorySection() {
               data-aos="fade-up"
               data-aos-duration="800"
             >
-              <img src="/assets/images/about/4.png" alt="story-image" />
+              <img src="/assets/images/about/44.jpeg" alt="story-image" />
 
               {/* PLAY BUTTON */}
               <div className="story__thumb-playbtn">

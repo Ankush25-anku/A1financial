@@ -15034,3 +15034,73 @@ html[data-bs-theme="dark"] .map-card {
 .header-section[data-bs-theme="light"] .header-bar span {
   background: #111 !important;
 }
+
+/* ./ team card ./ */
+
+/* REMOVE OVERLAY BEHAVIOR */
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  height: 100%; /* ✅ ensures equal height */
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+/* IMAGE */
+.team-img {
+  width: 100%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* DESKTOP */
+.team-img img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+/* HOVER */
+.team-card:hover .team-img img {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.team-content {
+  padding: 15px;
+}
+
+.team-content h6 {
+  font-weight: 600;
+}
+
+.team-content p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+  .team-img {
+    padding: 0; /* ❌ remove spacing */
+    background: none; /* ❌ remove gray bg */
+  }
+
+  .team-img img {
+    width: 100%;
+    height: auto;
+    max-height: none; /* ❌ remove restriction */
+    object-fit: cover; /* ✅ fill properly */
+  }
+}

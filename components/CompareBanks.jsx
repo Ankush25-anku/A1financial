@@ -1,35 +1,37 @@
 "use client";
-
+import Link from "next/link";
 export default function CompareBanks() {
   return (
     <section className="compare-hero">
       <div className="compare-container">
         {/* BREADCRUMB */}
         <p className="breadcrumb">Home › Banks & Loans</p>
-
         {/* TAG */}
         <div className="tag">🏦 HOME LOAN PARTNERS</div>
-
         {/* HEADING */}
         <h1>
           Compare <span>Home Loan Rates</span>
           <br />
           from Top Banks in India
         </h1>
-
         {/* SUBTEXT */}
         <p className="subtext">
           9+ banks listed. Compare interest rates, LTV, eligibility and
           features. Apply through Spectical Asset Pvt Ltd — expert guidance,
           priority processing, zero charges.
         </p>
-
+        {/* BUTTONS */}
+        import Link from "next/link";
         {/* BUTTONS */}
         <div className="btn-group">
-          <button className="primary-btn">🔍 Compare Banks</button>
-          <button className="secondary-btn">📄 Check Eligibility</button>
-        </div>
+          <Link href="/contact">
+            <button className="primary-btn">🔍 Compare Banks</button>
+          </Link>
 
+          <Link href="/contact">
+            <button className="secondary-btn">📄 Check Eligibility</button>
+          </Link>
+        </div>
         {/* STATS */}
         <div className="stats">
           <div>

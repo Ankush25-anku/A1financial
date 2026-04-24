@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Comparebanks1() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -261,7 +262,7 @@ export default function Comparebanks1() {
                 <li key={i}>✔ {f}</li>
               ))}
             </ul>
-{/* 
+            {/* 
             <button className="view-btn">View Details</button> */}
           </div>
         ))}
